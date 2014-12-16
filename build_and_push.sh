@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 echo "Logging in to docker hub"
 docker login
 echo "Building sqlite image"

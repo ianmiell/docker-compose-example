@@ -2,9 +2,17 @@ fig-example
 ===========
 
 A trivial Fig example.
+It uses socat to create a sqlite server accessible on localhost:12346.
 
-setup_dbs.sh
-build_and_push.sh
-Dockerfile
-fig.yml
+Run:
+
+```
+./setup_dbs.sh
+fig start
+telnet localhost 12346
+[another terminal]
+telnet localhost 12346
+select * from t1;
+```
+
 

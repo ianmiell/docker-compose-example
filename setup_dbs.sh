@@ -1,7 +1,14 @@
 #!/bin/bash
 echo "Creating directory"
-mkdir -p /tmp/sqlitedbs
-cd /tmp/sqlitedbs
+SQLITEDIR=/tmp/sqlitedbs
+rm -rf $SQLITEDIR
+if [ -a $SQLITEDIR ]
+then
+	echo "Failed to remove $SQLITEDIR"
+	exit 1
+fi
+mkdir -p $SQLITEDIR
+cd $SQLITEDIR
 echo "Removing old DBs"
 rm -f test live
 echo "Creating DBs"
