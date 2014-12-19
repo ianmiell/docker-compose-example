@@ -8,7 +8,7 @@ Run:
 
 ```
 ./setup_dbs.sh
-fig start
+fig up
 telnet localhost 12346
 [another terminal]
 telnet localhost 12346
